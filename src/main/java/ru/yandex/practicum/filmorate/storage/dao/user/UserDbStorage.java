@@ -23,11 +23,12 @@ import java.util.List;
 @Slf4j
 @Qualifier
 public class UserDbStorage implements UserStorage {
+
+    private final JdbcTemplate jdbcTemplate;
+
     public UserDbStorage(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
-
-    private final JdbcTemplate jdbcTemplate;
 
     @Override
     public User createUser(User user) {

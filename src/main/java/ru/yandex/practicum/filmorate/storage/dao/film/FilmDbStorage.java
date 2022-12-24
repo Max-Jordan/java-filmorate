@@ -153,19 +153,6 @@ public class FilmDbStorage implements FilmStorage {
         return jdbcTemplate.query(sqlQuery, this::makeFilm, count);
     }
 
-    @Override
-    public List<Film> getPopularFilmByGenre(int idGenre, int count) {
-//        final String popularByGenreSql = "SELECT id, name, description, release_date, duration " +
-//                "FROM films AS f" +
-//                "LEFT JOIN film_genre fg ON f.id = fg.film_id";
-        return List.of();
-    }
-
-    @Override
-    public List<Film> getPopularFilmByYear(int year) {
-        return List.of();
-    }
-
     private Film makeFilm(ResultSet resultSet, int rowNum) throws SQLException {
         final int id = resultSet.getInt("id");
         final String name = resultSet.getString("name");

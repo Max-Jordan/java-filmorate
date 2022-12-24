@@ -44,12 +44,4 @@ public class FilmService {
     public Collection<Film> findAll() {
         return filmStorage.findAll();
     }
-
-    public List<Film> getPopularFilmByGenre(int idGenre,int count) {
-        return filmStorage.getPopularFilmByGenre(idGenre, count);
-    }
-
-    public List<Film> getPopularFilmByYear(int year) {
-        return filmStorage.getPopularFilmByYear(year);
-    }
 }

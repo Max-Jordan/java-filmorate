@@ -62,15 +62,4 @@ public class FilmController {
     public List<Film> getPopularFilms(@RequestParam(defaultValue = "10", required = false) Integer count) {
         return filmService.getPopularFilms(count);
     }
-
-    @GetMapping("/popular_by_genre/{idGenre}")
-    public List<Film> getPopularFilmByGenre(@PathVariable int idGenre,
-                                            @RequestParam(defaultValue = "10", required = false) Integer count) {
-        return filmService.getPopularFilmByGenre(idGenre, count);
-    }
-
-    @GetMapping("/popular_by_year/{year}")
-    public List<Film> getPopularFilmByYear(@PathVariable int year) {
-        return filmService.getPopularFilmByYear(year);
-    }
 }
